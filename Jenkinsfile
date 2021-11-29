@@ -4,6 +4,7 @@ pipeline{
             steps{
                 echo "========executing A========"
                 printenv
+		echo "Working"
             }
             post{
                 always{

@@ -3,7 +3,7 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing A========"
-                printenv
+                sh 'printenv'
 		echo "Working"
             }
             post{

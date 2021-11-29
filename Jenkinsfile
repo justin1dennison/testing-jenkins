@@ -1,8 +1,7 @@
 pipeline{
+    agent  any
     stages{
-        agent {
-            label "node"
-        }        
+                
         stage("A"){
             steps{
                 echo "========executing A========"

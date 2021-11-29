@@ -1,19 +1,18 @@
 pipeline{
+    agent  any
     stages{
-        stage("A"){
+                
+        stage("Deployment"){
+            when {
+                changeRequest()
+            }
             steps{
-                echo "========executing A========"
-                printenv
+                echo "$env"
+
             }
             post{
                 always{
                     echo "========Completed A: Always========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
                 }
             }
         }
